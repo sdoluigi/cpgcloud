@@ -1,0 +1,89 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "62342734-a119-466b-8b99-c0116981410d": {
+        "id": "62342734-a119-466b-8b99-c0116981410d",
+        "parent": null,
+        "name": "cpgcloud",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "beb14f55-24a1-49a1-b644-52f3cee6c41c"
+        ],
+        "isRemovable": false,
+        "filePath": "cpgcloud"
+      },
+      "beb14f55-24a1-49a1-b644-52f3cee6c41c": {
+        "id": "beb14f55-24a1-49a1-b644-52f3cee6c41c",
+        "parent": "62342734-a119-466b-8b99-c0116981410d",
+        "name": "function.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "cpgcloud/function.js",
+        "code": "exports.handler = function(request, response) {\n    \n    response.send({\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8",
+          "timeout": 60,
+          "memory": 128,
+          "triggerType": 0
+        },
+        "triggers": [
+          {
+            "resourceName": "http-trigger",
+            "config": {}
+          }
+        ]
+      },
+      "e3c85bed-db25-4c55-9d9f-49027386a64f": {
+        "id": "e3c85bed-db25-4c55-9d9f-49027386a64f",
+        "parent": null,
+        "name": "index.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": false,
+        "filePath": "index.js",
+        "code": "// This file is used to register all your cloud functions in GCP.\n// DO NOT EDIT/DELETE THIS, UNLESS YOU KNOW WHAT YOU ARE DOING.\n\nexports.cpgcloudfunction = require(\"./cpgcloud/function.js\").handler;"
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "62342734-a119-466b-8b99-c0116981410d",
+    "openFiles": [
+      "beb14f55-24a1-49a1-b644-52f3cee6c41c"
+    ],
+    "currentFileId": "beb14f55-24a1-49a1-b644-52f3cee6c41c",
+    "resources": {
+      "http-trigger": {
+        "name": "http-trigger",
+        "type": "http-trigger",
+        "config": {}
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "cpgcloud",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "europe-west2",
+    "platform": "GCP",
+    "platformRegions": {},
+    "lastSave": 1571746053980
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "cpgcloud",
+      "url": "https://github.com/sdoluigi/cpgcloud"
+    }
+  }
+}
